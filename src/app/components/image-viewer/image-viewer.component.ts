@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ImageComponent} from "../image/image.component";
+import {Image} from "../../models/image";
 
 @Component({
     selector: 'app-image-viewer',
@@ -7,7 +8,7 @@ import {ImageComponent} from "../image/image.component";
     styleUrls: ['./image-viewer.component.css']
 })
 export class ImageViewerComponent implements OnInit {
-    @Input() images: any
+    @Input() images: Image[]
 
     constructor() {}
 
