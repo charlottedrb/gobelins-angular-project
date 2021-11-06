@@ -3,7 +3,7 @@ import {Model} from "./interfaces/model";
 export class Image implements Model{
     readonly path: string
     readonly description: string
-    readonly likes: number
+    likes: number
     readonly width: number
     readonly height: number
 

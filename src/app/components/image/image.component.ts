@@ -14,4 +14,7 @@ export class ImageComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    incrementLikes() {
+        this.image.likes++
+    }
 }

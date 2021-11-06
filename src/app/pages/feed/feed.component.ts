@@ -8,11 +8,12 @@ import * as faker from 'faker';
     styleUrls: ['./feed.component.css']
 })
 export class FeedComponent implements OnInit {
-    images: Image[] = []
+    firstSetImages: Image[] = []
+    secondSetImages: Image[] = []
 
     constructor() {
         for (let i = 0; i < 10; i++) {
-            this.images.push(
+            this.firstSetImages.push(
                 new Image({
                     'path': faker.image.imageUrl(120, 120, undefined, true),
                     'description': faker.lorem.lines(2),
@@ -22,7 +23,19 @@ export class FeedComponent implements OnInit {
                 })
             )
         }
-        console.log(this.images)
+
+        for (let i = 0; i < 6; i++) {
+            this.secondSetImages.push(
+                new Image({
+                    'path': faker.image.imageUrl(120, 120, undefined, true),
+                    'description': faker.lorem.lines(2),
+                    'likes': 0,
+                    'width': 120,
+                    'height': 120
+                })
+            )
+        }
+        console.log(this.secondSetImages)
     }
 
     ngOnInit(): void {
