@@ -24,7 +24,7 @@ export class FeedComponent implements OnInit {
             )
         }
 
-        for (let i = 0; i < 6; i++) {
+        for (let i = 10; i < 16; i++) {
             this.secondSetImages.push(
                 new Image({
                     'path': faker.image.imageUrl(120, 120, undefined, true),
