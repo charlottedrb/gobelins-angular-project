@@ -6,15 +6,15 @@
                 type="text"
                 placeholder="Love it !"
                 id="comment"
-                class="w-full rounded-tl rounded-bl border-green-200"
+                class="w-full rounded-tl rounded-bl border-gray-200"
                 #content
             />
-            <button class="bg-green-500 hover:bg-red-300 px-4 rounded-tr rounded-br text-white" (click)="addComment(content.value)">
+            <button class="bg-gray-800 text-white hover:bg-green-200 hover:text-gray-800 px-4 rounded-tr rounded-br transition-all" (click)="addComment(content.value)">
                 Post
             </button>
         </div>
     </div>
 </div>
-<div class="bg-gray-200 rounded mt-2 p-3" *ngFor="let comment of comments">
+<div class="bg-green-200 rounded mt-2 p-3 text-gray-800" *ngFor="let comment of comments">
     <app-comment [comment]="comment"></app-comment>
 </div>

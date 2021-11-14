@@ -1,10 +1,12 @@
 <div class="bg-gray-100 rounded flex shadow h-auto justify-between">
     <img class="rounded-l object-cover" src="{{ image.path || '' }}" alt="image">
     <div class="flex flex-col p-5 w-full">
-        <p class=" text-green-700">{{ image.description || '' }}</p>
+        <span *ngIf="showMore" class="text-gray-700">{{ image.description || '' }}</span>
+        <span *ngIf="!showMore" class="text-gray-700 w-max">{{ image.description || '' | truncateText:30 }}</span>
+        <span class="text-gray-800 font-bold cursor-pointer hover:text-green-300 transition-all w-max" (click)="clickShowMore()">{{ showMoreButton }}</span>
         <div class="text-right mt-2">
-            <p class="inline-block mr-3">{{ image.likes ?? 0 }} <fa-icon [icon]="likeIcon" class="text-green-700" (click)="incrementLikes()" [styles]="{cursor: 'pointer'}"></fa-icon></p>
-            <button class="px-2 py-1 bg-green-800 text-white rounded" (click)="emitToggleCommentsEvent()">comments</button>
+            <p class="inline-block mr-3">{{ image.likes ?? 0 }} <fa-icon [icon]="likeIcon" class="text-green-300" (click)="incrementLikes()" [styles]="{cursor: 'pointer'}"></fa-icon></p>
+            <button class="px-2 py-1 bg-gray-800 text-white rounded" (click)="emitToggleCommentsEvent()">comments</button>
         </div>
         <app-comments [ngClass]="{'hidden': toggleComments === false, 'block': toggleComments === true}"></app-comments>
     </div>

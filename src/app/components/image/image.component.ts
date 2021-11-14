@@ -11,9 +11,15 @@ export class ImageComponent implements OnInit {
     @Input() image: Image
     @Output() toggleCommentsEvent = new EventEmitter<boolean>()
     likeIcon = faThumbsUp;
-    toggleComments : boolean = false
+    toggleComments : boolean
+    showMore: boolean
+    showMoreButton: string
 
-    constructor() { }
+    constructor() {
+        this.toggleComments = false
+        this.showMore = false
+        this.showMoreButton = "more +"
+    }
 
     ngOnInit(): void {
     }
@@ -25,5 +31,12 @@ export class ImageComponent implements OnInit {
     emitToggleCommentsEvent() {
         this.toggleComments = !this.toggleComments
         this.toggleCommentsEvent.emit(this.toggleComments)
+    }
+
+    clickShowMore() {
+        if(this.showMoreButton == "less -") this.showMoreButton = "more +"
+        else this.showMoreButton = "less -"
+
+        this.showMore = !this.showMore
     }
 }
