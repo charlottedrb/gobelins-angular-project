@@ -6,7 +6,7 @@
         <span class="text-gray-800 font-bold cursor-pointer hover:text-green-300 transition-all w-max" (click)="clickShowMore()">{{ showMoreButton }}</span>
         <div class="text-right mt-2">
             <p class="inline-block mr-3">{{ image.likes ?? 0 }} <fa-icon [icon]="likeIcon" class="text-green-300" (click)="incrementLikes()" [styles]="{cursor: 'pointer'}"></fa-icon></p>
-            <button class="px-2 py-1 bg-gray-800 text-white rounded" (click)="emitToggleCommentsEvent()">comments</button>
+            <button class="px-2 py-1 bg-gray-800 text-white rounded" (click)="emitToggleCommentsEvent()"><fa-icon [icon]="commentIcon"></fa-icon></button>
         </div>
         <app-comments [ngClass]="{'hidden': toggleComments === false, 'block': toggleComments === true}"></app-comments>
     </div>

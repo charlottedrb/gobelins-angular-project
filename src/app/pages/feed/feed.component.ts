@@ -17,7 +17,7 @@ export class FeedComponent implements OnInit {
                 new Image({
                     'path': faker.image.imageUrl(120, 120, undefined, true),
                     'description': faker.lorem.lines(2),
-                    'likes': 0,
+                    'likes': faker.datatype.number(80),
                     'width': 120,
                     'height': 120
                 })
@@ -29,7 +29,7 @@ export class FeedComponent implements OnInit {
                 new Image({
                     'path': faker.image.imageUrl(120, 120, undefined, true),
                     'description': faker.lorem.lines(2),
-                    'likes': 0,
+                    'likes': faker.datatype.number(80),
                     'width': 120,
                     'height': 120
                 })

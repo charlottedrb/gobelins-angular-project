@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Comment} from "../../models/comment";
+import {faPaperPlane} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
     selector: 'app-comments',
@@ -9,6 +10,7 @@ import {Comment} from "../../models/comment";
 export class CommentsComponent implements OnInit {
     comments: Comment[]
     content: string
+    sendIcon = faPaperPlane
     @Output() addCommentEvent = new EventEmitter<Comment>()
 
     constructor() {

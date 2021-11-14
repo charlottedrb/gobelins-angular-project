@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Image} from "../../models/image";
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faCommentAlt } from "@fortawesome/free-regular-svg-icons";
 
 @Component({
     selector: 'app-image',
@@ -10,7 +11,8 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 export class ImageComponent implements OnInit {
     @Input() image: Image
     @Output() toggleCommentsEvent = new EventEmitter<boolean>()
-    likeIcon = faThumbsUp;
+    likeIcon = faThumbsUp
+    commentIcon = faCommentAlt
     toggleComments : boolean
     showMore: boolean
     showMoreButton: string
