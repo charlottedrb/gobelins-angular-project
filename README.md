@@ -1,6 +1,12 @@
-# GobelinsProjet
+# Gobelins Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
+
+![image](https://user-images.githubusercontent.com/47384185/141697984-ad420d5e-d83d-48b0-8acc-71bd7bc329be.png)
+
+![image](https://user-images.githubusercontent.com/47384185/141698019-fd69ce5e-a024-43c4-98dc-6538c057d837.png)
+
+
 
 ## Development server
 
