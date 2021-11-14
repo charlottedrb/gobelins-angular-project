@@ -1,5 +1,5 @@
 <div class="container mx-auto mt-6">
-    <h2 class="p-5 text-2xl font-bold">Coucou</h2>
+    <h2 class="p-5 text-2xl font-bold">{{ title }}</h2>
     <div class="flex flex-wrap p-5 rounded">
         <div class="w-2/4 p-3" *ngFor="let image of images">
             <app-image [image]="image"></app-image>

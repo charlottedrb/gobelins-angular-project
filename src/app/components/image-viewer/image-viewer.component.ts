@@ -9,6 +9,7 @@ import {Image} from "../../models/image";
 })
 export class ImageViewerComponent implements OnInit {
     @Input() images: Image[]
+    @Input() title: string
 
     constructor() {}
 
