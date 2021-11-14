@@ -15,7 +15,7 @@ export class CommentComponent implements OnInit {
 
     ngOnInit(): void {
         this.formattedDate = 'on ' + this.comment.createdAt.getDate() + '/' +
-            this.comment.createdAt.getMonth() + '/' +
+            (this.comment.createdAt.getMonth() + 1) + '/' +
             this.comment.createdAt.getFullYear() + ' at ' +
             this.comment.createdAt.getHours() + ':' + this.comment.createdAt.getMinutes()
     }
